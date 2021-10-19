@@ -11,7 +11,6 @@
         import org.junit.jupiter.api.TestMethodOrder;
         import za.ac.cput.Entity.Patient;
         import za.ac.cput.Factory.PatientFactory;
-        import za.ac.cput.Repository.PatientRepository;
         import za.ac.cput.Service.PatientService;
 
         import static org.junit.jupiter.api.Assertions.*;
@@ -19,7 +18,7 @@
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class PatientServiceTest
 {
-    private static PatientService service = PatientService.getService();
+    private static PatientService service;
     private static Patient patient = PatientFactory.createPatient
             (
                     "P01",

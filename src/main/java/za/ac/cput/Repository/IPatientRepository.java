@@ -6,15 +6,14 @@
 
 package za.ac.cput.Repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import za.ac.cput.Entity.Patient;
 import java.util.HashSet;
 import java.util.Set;
 
-public interface IPatientRepository extends IRepository<Patient,String>
+@Repository
+public interface IPatientRepository extends JpaRepository <Patient,String>
 {
-    public Patient create(Patient patient);
-    public Patient read(String id);
-    public Patient update(Patient patient);
-    public boolean delete(String id);
 }
 
